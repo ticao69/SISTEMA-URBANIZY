@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle Financeiro - Urbanizy</title>
+    <link rel="stylesheet" href="file.css" />
+</head>
+
+<body>
+    <!-- TELA DE LOGIN -->
+    <div id="auth-section">
+        <h2>Login</h2>
+        <form id="email-login-form">
+            <input type="email" id="email" placeholder="E-mail" required />
+            <input type="password" id="password" placeholder="Senha" required />
+            <button type="submit">Entrar com e-mail</button>
+        </form>
+    </div>
+
+    <!-- SISTEMA FINANCEIRO -->
+    <div class="container" id="app-section" style="display: none;">
+        <button id="logout">Sair</button>
+        <h1>Controle Financeiro - Urbanizy</h1>
+
+        <!-- FORMULÁRIO DE TRANSAÇÃO -->
+        <form id="transaction-form">
+            <input type="text" id="description" placeholder="Descrição" required />
+            <input type="number" id="amount" placeholder="Valor (ex: 250 ou -100)" required />
+            <input type="date" id="date" required />
+            <select id="type" required>
+                <option value="" disabled selected>Tipo</option>
+                <option value="entrada">Entrada</option>
+                <option value="saida">Saída</option>
+            </select>
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <!-- FILTROS -->
+        <div class="filters">
+            <input type="date" id="filter-date" />
+            <select id="filter-type">
+                <option value="">Todos</option>
+                <option value="entrada">Entradas</option>
+                <option value="saida">Saídas</option>
+            </select>
+            <button id="filter-btn">Filtrar</button>
+        </div>
+
+        <!-- RESUMO -->
+        <div class="summary">
+            <p>Entradas: <span id="income">R$ 0,00</span></p>
+            <p>Saídas: <span id="expense">R$ 0,00</span></p>
+            <p><strong>Saldo:</strong> <span id="balance">R$ 0,00</span></p>
+        </div>
+
+        <!-- LISTAGEM DE TRANSAÇÕES -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Tipo</th>
+                    <th>Valor</th>
+                    <th>Data</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="transaction-list"></tbody>
+        </table>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

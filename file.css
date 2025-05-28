@@ -1,0 +1,186 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    background-color: #fff;
+    padding: 25px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form,
+  .filters,
+  .summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+  
+  form input,
+  form select,
+  .filters input,
+  .filters select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #3f51b5;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #303f9f;
+  }
+  
+  .summary p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: center;
+  }
+  
+  td button {
+    background-color: #f44336;
+  }
+  
+  td button:hover {
+    background-color: #c62828;
+  }
+  
+  /* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+  form,
+  .filters,
+  .summary {
+    flex-direction: column;
+  }
+
+  form input,
+  form select,
+  .filters input,
+  .filters select,
+  button {
+    width: 100%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .summary p {
+    font-size: 14px;
+  }
+}
+
+/* RESET E ESTILO GERAL */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f2f2f2;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* CONTAINER PRINCIPAL */
+  #login-section {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* TÍTULO */
+  #login-section h2 {
+    margin-bottom: 25px;
+    color: #3f51b5;
+  }
+  
+  /* FORMULÁRIO DE LOGIN */
+  #email-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* INPUTS */
+  #email-login-form input {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  /* BOTÕES */
+  #google-login,
+  #email-login-form button,
+  #logout {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  #google-login:hover,
+  #email-login-form button:hover,
+  #logout:hover {
+    background-color: #303f9f;
+  }
+  
+  /* LOGOUT VISIBLE APENAS NO SISTEMA */
+  #logout {
+    float: right;
+    margin-bottom: 15px;
+  }
+  
